@@ -1,0 +1,24 @@
+# Datos de la competencia (las reglas de Kaggle suelen prohibir redistribuirlos)
+data/
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Modelos / artefactos pesados
+*.pt
+*.pth
+
+# Credenciales
+kaggle.json
+.env
+
+# SO / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
