@@ -37,6 +37,14 @@ Red neuronal fully connected implementada desde cero en PyTorch para predecir la
 
 ## Resultados
 
-| Modelo | MSE CV (5-fold) | MSE público Kaggle |
+| Modelo | MSE CV (5-fold, MPa²) | MSE Kaggle (MPa²) |
 |---|---|---|
-| _pendiente_ | | |
+| Baseline: predecir la media | 296.4 ± 35.4 | — |
+| Baseline: LinearRegression (con feature engineering) | 50.5 ± 10.9 | — |
+| MLP base [128, 64, 32] ReLU | 18.9 ± 3.6 | — |
+| Mejor MLP [256, 128, 64] ReLU + `log1p(age)`, modelo único | 17.35 ± 1.48 | — |
+| **Mejor MLP, ensamble de 5 semillas (submission)** | **15.84 ± 2.36** | **21.86** |
+
+El MSE en Kaggle (RMSE ≈ 4.7 MPa, R² ≈ 0.93) resultó mayor que el estimado por validación cruzada. El análisis de esa brecha está en la sección 7.5 del notebook y las conclusiones en la sección 8.
+
+![Puntaje en Kaggle](reports/kaggle_score.png)
