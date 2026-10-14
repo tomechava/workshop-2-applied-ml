@@ -1,0 +1,10 @@
+# PyTorch CPU: pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.11
+numpy>=2.3
+pandas>=3.0
+scikit-learn>=1.8
+matplotlib>=3.10
+seaborn>=0.13
+jupyter
+ipykernel
+kaggle
