@@ -34,7 +34,7 @@ Row ID, cement, slag, flyash, water, superplasticizer, coarseaggregate, fineaggr
 | Valores faltantes | 0 en train y test | No se imputa; documentarlo |
 | Tipos | Todo numérico (`age` es int) | No hay encoding; justificarlo |
 | Duplicados exactos (sin `Row ID`) | 16 filas | Decidir: eliminar o conservar (y justificar) |
-| Duplicados solo en features | 26 filas (10 con target distinto) | Ruido de laboratorio; usar **GroupKFold** o eliminar duplicados para que la misma mezcla no quede en train y valid a la vez (leakage) |
+| Duplicados solo en features | 26 filas (7 mezclas con target distinto) | Ruido de laboratorio; usar **GroupKFold** o eliminar duplicados para que la misma mezcla no quede en train y valid a la vez (leakage) |
 | Filas de test idénticas (features) a train | 11 | Curiosidad para el EDA; no explotar manualmente |
 | Ceros | slag 322, flyash 387, superplasticizer 249 | Indicadores binarios `has_slag`, `has_flyash`, `has_sp` |
 | `age` | skew 3.28; valores 28 (298), 3 (96), 7 (82), 56 (69)… | `log1p(age)` |
@@ -205,7 +205,7 @@ Checklist (cada ítem = celda de código + breve Markdown interpretando):
 
 - [ ] 1. `shape`, `info()`, `head()` de train y test.
 - [ ] 2. `describe().T`.
-- [ ] 3. `isna().sum()` y duplicados: exactos (16) y por features (26, mostrar los 10 con target distinto).
+- [ ] 3. `isna().sum()` y duplicados: exactos (16) y por features (26, mostrar las 7 mezclas con target distinto).
 - [ ] 4. Clasificar columnas: 8 numéricas, 0 categóricas, `Row ID` excluido (mostrar corr ≈ 0 como evidencia).
 - [ ] 5. Target: histograma + KDE + boxplot; skew; outliers por IQR.
 - [ ] 6. Histogramas de los 8 predictores (grilla 2×4); % de ceros por variable; `age.value_counts()` (bar plot).
