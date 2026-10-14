@@ -1,5 +1,7 @@
 # DEVELOPMENT-PLAN — Workshop 2: MLP desde cero para resistencia del concreto
 
+**Integrantes:** Tomás Echavarría Gil · Daniel Arango
+
 Plan de trabajo paso a paso, desde la creación del repositorio hasta la submission en Kaggle.
 Basado en `workshop2.md`, los notebooks de referencia (`01_mnist`, `02_asl`) y una inspección previa de los CSV.
 

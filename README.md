@@ -1,6 +1,7 @@
 # Workshop 2 — MLP desde cero en PyTorch: resistencia del concreto
 
-**Curso:** ST1613 Applied Machine Learning — EAFIT
+**Curso:** ST1613 Applied Machine Learning — EAFIT  
+**Integrantes:** Tomás Echavarría Gil · Daniel Arango  
 **Competencia:** [Concrete Strength Regression (Kaggle)](https://www.kaggle.com/competitions/concrete-strength-regression)
 
 Red neuronal fully connected implementada desde cero en PyTorch para predecir la resistencia a la compresión del concreto (`csMPa`, MPa) a partir de su composición y edad. Métrica oficial: **MSE**.
